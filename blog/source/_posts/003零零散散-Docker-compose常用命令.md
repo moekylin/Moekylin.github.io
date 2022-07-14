@@ -46,8 +46,15 @@ Parameter:
 docker-compose ps
 ```
 
-### 4.. 停止运行中容器
+### 4. 停止运行中容器
 
 ```bash
 docker-compose stop <SERVICE>
 ```
+
+#### 5. 停止所有正在运行的容器
+
+```bash
+docker ps -aq|xargs docker stop	# docker ps -aq 列出所有ID，xargs 转交给 docker stop 停止所有容器
+```
+
