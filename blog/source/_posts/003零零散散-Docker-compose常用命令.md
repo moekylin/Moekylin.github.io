@@ -5,7 +5,7 @@ tags:
  - Docker-compose
 ---
 
-#### 1. docker-compose 命令格式
+### 1. 命令格式
 
 ```bash
 docker-compose [-f <arg>...] [options] [COMMAND] [ARGS...]
@@ -18,7 +18,7 @@ Parameter:
   -v，–version打印版本并退出
 ```
 
-#### 2. 运行容器
+### 2. 运行容器
 
 docker-compose up [options]
 
@@ -40,19 +40,35 @@ Parameter:
   docker-compose up -d --force-recreate
 ```
 
-### 3. 列出项目中目前的所有容器
+### 3. 列出容器
+
+3.1 列出所有运行中的容器
 
 ```bash
 docker-compose ps
 ```
 
-### 4. 停止运行中容器
+3.2 列出所有容器的id以及状态
+
+```bash
+docker ps
+```
+
+3.3 列出所有运行中容器的id
+
+```
+docker ps -aq
+```
+
+### 4. 停止容器
+
+4.1 停止某一容器
 
 ```bash
 docker-compose stop <SERVICE>
 ```
 
-#### 5. 停止所有正在运行的容器
+4.2 停止所有正在运行的容器
 
 ```bash
 docker ps -aq|xargs docker stop	# docker ps -aq 列出所有ID，xargs 转交给 docker stop 停止所有容器
