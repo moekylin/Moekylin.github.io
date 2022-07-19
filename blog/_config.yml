@@ -3,18 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Moekylin's Blog
+title: Moekylin's blog
 subtitle: ''
 description: ''
 keywords:
-author: 77
+author: Moekylin
 language: zh-CN
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://kylin.moe
-permalink: categories/:category/:title/
+url: http://example.com
+permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -28,9 +28,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render: 
-  - README.md
-  - CNAME
+skip_render:
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -47,7 +45,7 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: false
+  line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
@@ -99,11 +97,9 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: fluid
+theme: icarus
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: "git"
-  repository: https://github.com/moekylin/moekylin.github.io.git
-  branch: blog
+  type: ''

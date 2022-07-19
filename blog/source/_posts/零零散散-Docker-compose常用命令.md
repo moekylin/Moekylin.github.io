@@ -3,7 +3,12 @@ title: Docker-compose常用命令
 categories: 零零散散
 tags:
  - Docker-compose
+ - Command
 ---
+
+> docker-compose + docker 常用运行、查看、停止命令……
+
+<!-- MORE -->
 
 ### 1. 命令格式
 
