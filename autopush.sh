@@ -1,1 +1,3 @@
-git add .;git commit -m "source";git push;cd blog;hexo clean;hexo g;hexo d
+git add .
+git commit -m "back up"
+git push

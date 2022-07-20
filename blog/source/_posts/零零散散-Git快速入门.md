@@ -1,10 +1,12 @@
 ---
 title: Git快速入门
+date: 2022-07-20
 categories: 零零散散
 tags:
  - git
  - Command
 mermaid: true
+toc: true
 ---
 
 > 简单快速的入门 git 基本命令如何使用；如何创建仓库、如何提交托管你的工程项目……

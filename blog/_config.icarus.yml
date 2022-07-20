@@ -3,12 +3,13 @@ version: 5.0.0
 # Icarus theme variant, can be "default" or "cyberpunk"
 variant: default
 # Path or URL to the website's logo
-logo: /img/logo.png
-dark: /img/logo.png
+logo:
+    light: /images/logo.png
+    dark: /images/logo-dark.png
 # Page metadata configurations
 head:
     # URL or path to the website's icon
-    favicon: /img/favicon.png
+    favicon: /images/favicon.png
     # Web application manifests configuration
     # https://developer.mozilla.org/en-US/docs/Web/Manifest
     manifest:
@@ -103,22 +104,24 @@ head:
     # URL or path to the website's RSS atom.xml
     rss: 
 # Page top navigation bar configurations
+# 页面顶部导航栏配置
 navbar:
-    # Navigation menu items
     menu:
-        Home: /
-        Archives: /archives
-        Categories: /categories
-        Tags: /tags
-        About: /about
+        首页: /
+        时间轴: /archives
+        分类: /categories
+        标签: /tags
+        关于: /about
     # Links to be shown on the right of the navigation bar
-    links:
-        Download on GitHub:
-            icon: fab fa-github
-            url: https://github.com/ppoffice/hexo-theme-icarus
+    # 链接显示在导航栏的右边
+    # links:
+    #     Download on GitHub:
+    #         icon: fab fa-github
+    #         url: https://github.com/ppoffice/hexo-theme-icarus
 # Page footer configurations
 footer:
     # Links to be shown on the right of the footer section
+    # 链接显示在右脚
     links:
         Creative Commons:
             icon: fab fa-creative-commons
@@ -126,9 +129,9 @@ footer:
         Attribution 4.0 International:
             icon: fab fa-creative-commons-by
             url: https://creativecommons.org/licenses/by/4.0/
-        Download on GitHub:
-            icon: fab fa-github
-            url: https://github.com/ppoffice/hexo-theme-icarus
+        # Download on GitHub:
+        #     icon: fab fa-github
+        #     url: https://github.com/ppoffice/hexo-theme-icarus
 # Article related configurations
 article:
     # Code highlight settings
@@ -164,10 +167,10 @@ search:
 comment:
     type: disqus
     # Disqus shortname
-    shortname: 'moekylin'
+    shortname: 'moekylins-blog'
 # Donate plugin configurations
+# 捐赠插件配置
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
-# 赞助 | 爱发电 | 赞赏 | 打赏 | 捐助
 # donates:
 #     # "Afdian.net" donate button configurations
 #     -
@@ -202,98 +205,105 @@ comment:
 #         # Wechat qrcode image URL
 #         qrcode: ''
 # Share plugin configurations
+# 共享插件配置
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
-# 分享 | 共享 | 发送到
 # share:
-    # type: sharethis
-    # URL to the ShareThis share plugin script
-    # install_url: ''
+#     type: sharethis
+#     # URL to the ShareThis share plugin script
+#     install_url: ''
 # Sidebar configurations.
+# 侧边栏的配置。
 # Please be noted that a sidebar is only visible when it has at least one widget
+# 请注意，侧边栏只有在包含至少一个小部件时才可见
 sidebar:
-    # Left sidebar configurations
     left:
         # Whether the sidebar sticks to the top when page scrolls
-        sticky: false
+        sticky: true   # 固定显示在屏幕
     # Right sidebar configurations
+    # 右边侧侧边栏配置
     right:
         # Whether the sidebar sticks to the top when page scrolls
-        sticky: false
+        sticky: true   # 固定显示在屏幕
 # Sidebar widget configurations
+# 侧边栏小部件配置
 # http://ppoffice.github.io/hexo-theme-icarus/categories/Widgets/
 widgets:
     # Profile widget configurations
+    # 配置文件小部件配置
     -
         # Where should the widget be placed, left sidebar or right sidebar
+        # 小部件应该放置在哪里，左边栏还是右边栏
         position: left
         type: profile
-        # Author name
-        author: Your name
+        # # Author name
+        # author: Your name
         # Author title
-        author_title: Your title
+        author_title: 你走的每一步路，都算数。
+        # Author name
+        author: Moekylin
         # Author's current location
-        location: Your location
+        # 作者的当前位置
+        # location: Unknow
         # URL or path to the avatar image
-        avatar: 
+        avatar: /images/avatar.png
         # Whether show the rounded avatar image
         avatar_rounded: false
         # Email address for the Gravatar
         gravatar: 
         # URL or path for the follow button
-        follow_link: https://github.com/ppoffice
+        follow_link: https://www.yuque.com/moekylin
         # Links to be shown on the bottom of the profile widget
-        # social_links:
-        #     Github:
-        #         icon: fab fa-github
-        #         url: https://github.com/ppoffice
-        #     Facebook:
-        #         icon: fab fa-facebook
-        #         url: https://facebook.com
-        #     Twitter:
-        #         icon: fab fa-twitter
-        #         url: https://twitter.com
-        #     Dribbble:
-        #         icon: fab fa-dribbble
-        #         url: https://dribbble.com
-        #     RSS:
-        #         icon: fas fa-rss
-        #         url: /
+        social_links:
+            # Github:
+            #     icon: fab fa-github
+            #     url: https://github.com/ppoffice
+            # Facebook:
+            #     icon: fab fa-facebook
+            #     url: https://facebook.com
+            # Twitter:
+            #     icon: fab fa-twitter
+            #     url: https://twitter.com
+            # Dribbble:
+            #     icon: fab fa-dribbble
+            #     url: https://dribbble.com
+            # RSS:
+            #     icon: fas fa-rss
+            #     url: /
     # Table of contents widget configurations
+    # 大纲 | TOC | 目录
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: left
+        position: right
         type: toc
         # Whether to show the index of each heading
-        index: true
+        # 是否显示每个标题的索引
+        index: false
         # Whether to collapse sub-headings when they are out-of-view
+        # 当小标题不在视野中时是否折叠
         collapsed: true
         # Maximum level of headings to show (1-6)
-        depth: 3
-    # Recommendation links widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: links
-        # Names and URLs of the sites
-        links:
-            Hexo: https://hexo.io
-            Bulma: https://bulma.io
-    # Categories widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: categories
+        # 显示标题的最大级别(1-6)
+        depth: 4
     # Recent posts widget configurations
+    # 最新文章小部件配置
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: right
         type: recent_posts
     # Archives widget configurations
+    # 归档小部件配置
+    -
+        # Where should the widget be placed, left sidebar or right sidebar
+        position: right
+        type: archives
+    # Categories widget configurations
+    # categories 小部件配置
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: left
-        type: archives
+        type: categories
     # Tags widget configurations
+    # 标签小部件配置
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: left
@@ -304,43 +314,58 @@ widgets:
         amount: 
         # Whether to show tags count, i.e. number of posts in the tag.
         show_count: true
-    # Google FeedBurner email subscription widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: subscribe_email
-        # Hint text under the email input
-        description: 
-        # Feedburner ID
-        feedburner_id: ''
-    # Google AdSense unit configurations
+    # Recommendation links widget configurations
+    # # 建议链接小部件配置
     # -
-        # Where should the widget be placed, left sidebar or right sidebar
-        # position: left
-        # type: adsense
-        # AdSense client ID
-        # client_id: ''
-        # AdSense AD unit ID
-        # slot_id: ''
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     # 小部件应该放置在哪里，左边栏还是右边栏
+    #     position: left
+    #     type: links
+    #     # Names and URLs of the sites
+    #     links:
+    #         Hexo: https://hexo.io
+    #         Bulma: https://bulma.io
+    # Google FeedBurner email subscription widget configurations
+    # 谷歌feed burner电子邮件订阅小部件配置
+    # -
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     position: left
+    #     type: subscribe_email
+    #     # Hint text under the email input
+    #     description: 
+    #     # Feedburner ID
+    #     feedburner_id: ''
+    # # Google AdSense unit configurations
+    # -
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     position: left
+    #     type: adsense
+    #     # AdSense client ID
+    #     client_id: ''
+    #     # AdSense AD unit ID
+    #     slot_id: ''
     # Follow.it email subscription widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: followit
-        # Hint text under the email input
-        description: 
-        # Subscription form action URL
-        action_url: ''
-        # Feed claiming verification code
-        verification_code: ''
+    # Follow.it 通过电子邮件订阅小部件配置
+    # -
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     position: left
+    #     type: followit
+    #     # Hint text under the email input
+    #     description: 
+    #     # Subscription form action URL
+    #     action_url: ''
+    #     # Feed claiming verification code
+    #     verification_code: ''
 # Plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:
     # Enable page startup animations
+    # 启用页面启动动画
     animejs: true
     # Show the "back to top" button
     back_to_top: true
     # Baidu Analytics plugin settings
+    # 百度分析插件设置
     # https://tongji.baidu.com
     baidu_analytics:
         # Baidu Analytics tracking ID
@@ -351,6 +376,7 @@ plugins:
         # Bing Webmaster Tools tracking ID in the <meta> tag
         tracking_id: 
     # BuSuanZi site/page view counter
+    # 卜蒜子 网站/页面视图计数器
     # https://busuanzi.ibruce.info
     busuanzi: false
     # CNZZ statistics

@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Moekylin's blog
+title: Moekylin's Blog
 subtitle: ''
 description: ''
 keywords:
@@ -31,7 +31,7 @@ i18n_dir: :lang
 skip_render:
   - README.md
   - CNAME
-  
+
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
@@ -99,11 +99,13 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
+#theme: landscape
 theme: icarus
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repository: https://github.com/moekylin/moekylin.github.io.git
+  repository: git@github.com:moekylin/Moekylin.github.io.git
   branch: blog
+
