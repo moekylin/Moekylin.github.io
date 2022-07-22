@@ -238,12 +238,12 @@ widgets:
         # # Author name
         # author: Your name
         # Author title
-        author_title: 你走的每一步路，都算数。
+        author_title: 一场永不结束的风
         # Author name
         author: Moekylin
         # Author's current location
         # 作者的当前位置
-        # location: Unknow
+        location: Unknow
         # URL or path to the avatar image
         avatar: /images/avatar.png
         # Whether show the rounded avatar image
@@ -290,12 +290,6 @@ widgets:
         # Where should the widget be placed, left sidebar or right sidebar
         position: right
         type: recent_posts
-    # Archives widget configurations
-    # 归档小部件配置
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: right
-        type: archives
     # Categories widget configurations
     # categories 小部件配置
     -
@@ -314,6 +308,12 @@ widgets:
         amount: 
         # Whether to show tags count, i.e. number of posts in the tag.
         show_count: true
+    # Archives widget configurations
+    # 归档小部件配置
+    -
+        # Where should the widget be placed, left sidebar or right sidebar
+        position: left
+        type: archives
     # Recommendation links widget configurations
     # # 建议链接小部件配置
     # -
